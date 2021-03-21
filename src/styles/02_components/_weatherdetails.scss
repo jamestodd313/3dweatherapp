@@ -1,0 +1,27 @@
+#weather-details{
+    .location-data{
+        display: block;
+        margin-bottom: 16px;
+    }
+    .weather-data{
+        span{
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .location-data{
+            margin-bottom: 32px;
+        }
+        .weather-data{
+            span{
+                display: inline-block;
+                &:first-of-type{
+                    margin-right: 24px;
+                }
+            }
+            
+        }
+    }
+}
+

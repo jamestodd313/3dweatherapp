@@ -24,8 +24,8 @@ export const SearchForm = ({setLoading, setWeatherData, setLocationData}) => {
     }
     return (
         <form id="search-form" onSubmit={e=> handleSubmit(e)}>
-        <h2>Enter a location to get a 3D weather report</h2>
-        <input type="location" value={query} onChange={e=>handleChange(e)} error={`${fetchError}`} onError={e=> console.log('hello')}/>
+        <h2 className="fs-med">Enter a location to get a 3D weather report</h2>
+        <input className="fs-large" type="location" value={query} onChange={e=>handleChange(e)} error={`${fetchError}`} onError={e=> console.log('hello')}/>
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" width="30.621" height="30.621" viewBox="0 0 30.621 30.621">
             <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">

@@ -1,0 +1,26 @@
+footer{
+    padding: 16px 24px;
+    width: 100%;
+    .credit-section{
+        display: block;
+        margin-bottom: 8px;
+        line-height: 16px;
+    }
+    @media screen and (min-width: 768px){
+        position: absolute;
+        bottom: 0;
+    }
+    @media screen and (min-width: 992px){
+        padding: 16px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .credit-section{
+            margin-bottom: 8px;
+            line-height: 16px;
+        }
+    }
+    @media screen and (min-width: 1200px){
+        padding: 16px 140px;
+    }
+}

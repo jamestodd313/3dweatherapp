@@ -8,7 +8,35 @@ h1{
     font-family: "Codystar", sans-serif;
     font-size: 56px;
     color: white;
-    @media screen and (min-width: 992px){
+    word-wrap: break-word;
+    @media screen and (min-width: 768px){
         font-size: 82px;
+    }
+}
+h2{
+    font-family: 'Exo 2',sans-serif;
+}
+
+.fs-small{
+    font-size: 12px;
+    
+}
+.fs-med{
+    font-size: 16px;
+    font-weight: 300;
+}
+.fs-large{
+    font-size: 24px;
+}
+
+input{
+    font-family: 'Lato', sans-serif;
+}
+
+// footer stuff
+.credit-section{
+    color: $dark-grey;
+    a.credit-link{
+        color: $light-blue;
     }
 }

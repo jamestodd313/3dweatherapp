@@ -2,9 +2,13 @@ header{
     height: 80px;
     display: grid;
     place-content: center;
+
     @media screen and (min-width: 992px){
         padding: 40px 100px;
         display: block;
+        a.logo{
+            margin-left: -50px;
+        }
     }
     @media screen and (min-width: 1200px){
         padding: 60px 140px;

@@ -1,0 +1,25 @@
+main{
+    padding: 16px 24px;
+    .welcome-title{
+        margin-bottom: 40px;
+    }
+    @media screen and (min-width: 992px){
+        padding: 16px 100px;
+    }
+    @media screen and (min-width: 1200px){
+        padding: 16px 140px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 16px;
+        .welcome-title, #weather-details{
+            grid-column: 1 / 7;
+        }
+        .model-container{
+            grid-column: 8 / 13;
+        }
+        #search-form{
+            grid-column: 1 / 7;
+            margin-top: 40px;
+        }
+    }
+}

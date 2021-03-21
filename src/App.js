@@ -8,7 +8,7 @@ import { SearchForm } from './components/SearchForm'
 import { Footer } from './components/Footer'
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [weatherData, setWeatherData] = useState(null)
   const [locationData, setLocationData] = useState(null)
   return (
@@ -20,10 +20,10 @@ function App() {
           locationData && weatherData ? (
             <>
               <WeatherDetails data={{locationData, weatherData}}/> 
-              <Model condition={weatherData.condition.text}/>
             </>
-          ) : <h1>3D<br/>WEATHER</h1>
+          ) : <h1 className="welcome-title">3D<br/>WEATHER</h1>
         }
+        <Model condition={weatherData ? weatherData.condition.text : "default"}/>
         <SearchForm setLoading={setLoading} setWeatherData={setWeatherData} setLocationData={setLocationData}/>
       </Main>
       <Footer/>

@@ -1,0 +1,22 @@
+#search-form{
+    position: relative;
+    // z-index: -1;
+    input{
+        background: none;
+        border: none;
+        border-bottom: 1px solid $light-grey;
+        display: block;
+        width: 100%;
+        color: white;
+        margin-top: 16px;
+        padding: 6px 12px;
+    }
+    button{
+        position: absolute;
+        z-index: 0;
+        background: none;
+        right: 24px;
+        border: none;
+        transform: translateY(-101%);
+    }
+}

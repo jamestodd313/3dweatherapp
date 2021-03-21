@@ -1,9 +1,10 @@
 *{
     box-sizing: border-box;
 }
+html, body{
+    min-height: 100vh;
+}
 body{
     background: $dark-blue;
-    // @media screen and (min-width: 992px){
-    //     padding: 40px 140px;
-    // }
+    min-height: 100vh;
 }
