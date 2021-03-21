@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { fetchWeather } from '../utils/fetchWeather'
-export const SearchForm = (setLoading, setWeatherData, setLocationData) => {
+export const SearchForm = ({setLoading, setWeatherData, setLocationData}) => {
     const [query, setQuery] = useState('')
     const [fetchError, setFetchError] = useState(false)
     const handleChange = function(e){
@@ -8,21 +8,24 @@ export const SearchForm = (setLoading, setWeatherData, setLocationData) => {
     }
     const handleSubmit = async function(e){
       e.preventDefault()
+      setWeatherData(null)
+      setLocationData(null)
       setLoading(true)
       const response = await fetchWeather(query)
-      if(response.location){
+      if(!response.error){
+        setLoading(false)
         setFetchError(false)
         setWeatherData(response.current)
         setLocationData(response.location)
       }else{
+        setLoading(false)
         setFetchError(true)
       }
-      setLoading(false)
     }
     return (
         <form id="search-form" onSubmit={e=> handleSubmit(e)}>
         <h2>Enter a location to get a 3D weather report</h2>
-        <input type="location" value={query} onChange={e=>handleChange(e)} error={`${fetchError}`}/>
+        <input type="location" value={query} onChange={e=>handleChange(e)} error={`${fetchError}`} onError={e=> console.log('hello')}/>
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" width="30.621" height="30.621" viewBox="0 0 30.621 30.621">
             <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">

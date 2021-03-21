@@ -14,8 +14,7 @@ export const fetchWeather = function(query){
       return weatherData
     })
     .catch(err => {
-      console.error(err);
-      throw new Error(err)
+      return {error: true}
     });
     
     // return {location: {name: 'Minneapolis'}, current: {lastUpdated: 1234564}}
