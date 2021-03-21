@@ -1,6 +1,8 @@
 footer{
     padding: 16px 24px;
     width: 100%;
+    position: relative;
+    z-index: 100;
     .credit-section{
         display: block;
         margin-bottom: 8px;
