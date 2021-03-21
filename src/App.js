@@ -15,8 +15,8 @@ function App() {
       <Header/>
       {loading && <Spinner/>}
       <Main>
-        {locationData && locationData.name ? <WeatherDetails data={{locationData, weatherData}}/> : <h1>3D<br/>WEATHER</h1>}
-        <Model/>
+        {locationData && weatherData ? <WeatherDetails data={{locationData, weatherData}}/> : <h1>3D<br/>WEATHER</h1>}
+        <Model condition={weatherData.condition.text}/>
         <SearchForm setLoading={setLoading} setWeatherData={setWeatherData} setLocationData={setLocationData}/>
       </Main>
       <Footer/>
