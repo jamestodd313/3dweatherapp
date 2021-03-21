@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&family=Exo+2:wght@300&family=Lato&display=swap');
+body{
+    font-size: 12px;
+    font-family: "Lato", sans-serif;
+    color: $light-grey;
+}
+h1{
+    font-family: "Codystar", sans-serif;
+    font-size: 56px;
+    color: white;
+    @media screen and (min-width: 992px){
+        font-size: 82px;
+    }
+}
