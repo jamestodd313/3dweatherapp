@@ -1,7 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # 3d models
-/public/a_windy_day
+.gltf
+.bin
 
 # dependencies
 /node_modules

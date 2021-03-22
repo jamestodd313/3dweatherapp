@@ -23,7 +23,7 @@ function App() {
             </>
           ) : <h1 className="welcome-title">3D<br/>WEATHER</h1>
         }
-        <Model condition={weatherData ? weatherData.condition.text : "default"}/>
+        <Model condition={weatherData ? weatherData.condition.text : "sunny"}/>
         <SearchForm setLoading={setLoading} setWeatherData={setWeatherData} setLocationData={setLocationData}/>
       </Main>
       <Footer/>
