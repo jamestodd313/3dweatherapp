@@ -3,6 +3,7 @@ import {_3d} from '../3d/_3d'
 export const Model = ({condition}) => {
     const [modelToDisplay, setModelToDisplay] = useState(undefined)
     const containerRef = useRef(null)
+    
     useEffect(()=>{
         let scene = null
         if(containerRef){

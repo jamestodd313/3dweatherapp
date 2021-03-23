@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
 export class _3d{
     constructor(container){
         this.scene = new THREE.Scene()
@@ -34,6 +35,11 @@ export class _3d{
             case "sunny":
                 geo = new THREE.BoxGeometry(1, 1, 1)
                 mesh = new THREE.MeshBasicMaterial({color: 0x00ff00})
+                let loader = new GLTFLoader()
+                loader.load('../../public/a_windy_day/out.glb', (model)=>{
+                    this.model = JSON.parse(model.scene)
+                    this.scene.add( this.model );
+                })
             break
             default:
                 geo = new THREE.BoxGeometry(1, 1, 1)
